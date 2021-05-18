@@ -1,4 +1,5 @@
 import React from "react";
+import { SingInButton } from "../SingInButton";
 import styles from "./style.module.scss";
 
 export function Header() {
@@ -8,8 +9,9 @@ export function Header() {
         <img src="/logo.svg" alt="ig.news" />
         <nav>
           <a className={styles.active}>Home</a>
-          <a className={styles.active}>Posts</a>
+          <a>Posts</a>
         </nav>
+        <SingInButton />
       </div>
     </header>
   );
