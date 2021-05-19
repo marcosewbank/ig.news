@@ -14,10 +14,6 @@ interface HomeProps {
   };
 }
 
-//client-side
-//server-side
-//static site generation
-
 export default function Home({ product }: HomeProps) {
   return (
     <>
@@ -39,7 +35,7 @@ export default function Home({ product }: HomeProps) {
           <SubscribeButton priceId={product.priceId} />
         </section>
 
-        <img src="/avatar.svg" alt="Girl codign" />
+        <img src="/avatar.svg" alt="Human codign" />
       </main>
     </>
   );
