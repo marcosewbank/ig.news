@@ -1,6 +1,8 @@
 import React from "react";
+
 import { SingInButton } from "../SingInButton";
 import styles from "./style.module.scss";
+import { ActiveLink } from "../ActiveLink";
 
 export function Header() {
   return (
@@ -8,8 +10,12 @@ export function Header() {
       <div className={styles.headerContent}>
         <img src="/logo.svg" alt="ig.news" />
         <nav>
-          <a className={styles.active}>Home</a>
-          <a>Posts</a>
+          <ActiveLink activeClassName={styles.active} href="/">
+            <a>Home</a>
+          </ActiveLink>
+          <ActiveLink activeClassName={styles.active} href="/posts">
+            <a>Posts</a>
+          </ActiveLink>
         </nav>
         <SingInButton />
       </div>
