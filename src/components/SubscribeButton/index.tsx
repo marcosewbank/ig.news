@@ -1,5 +1,6 @@
 import React from "react";
 import { useSession, signIn } from "next-auth/client";
+import { useRouter } from "next/router";
 
 import styles from "./styles.module.scss";
 import { api } from "../../services/api";
@@ -11,10 +12,20 @@ interface SubscribeButtonProps {
 
 export function SubscribeButton({ priceId }: SubscribeButtonProps) {
   const [session] = useSession();
+  const router = useRouter();
 
+  console.log(
+    "🚀 ~ file: index.tsx ~ line 24 ~ handleSubscribe ~ session",
+    session
+  );
   async function handleSubscribe() {
     if (!session) {
       signIn("github");
+      return;
+    }
+
+    if (session.activeSubscription) {
+      router.push("/posts");
       return;
     }
 
