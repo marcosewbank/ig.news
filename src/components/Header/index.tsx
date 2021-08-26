@@ -1,6 +1,6 @@
 import React from "react";
 
-import { SingInButton } from "../SingInButton";
+import { SignInButton } from "../SignInButton";
 import styles from "./style.module.scss";
 import { ActiveLink } from "../ActiveLink";
 
@@ -17,7 +17,7 @@ export function Header() {
             <a>Posts</a>
           </ActiveLink>
         </nav>
-        <SingInButton />
+        <SignInButton />
       </div>
     </header>
   );
